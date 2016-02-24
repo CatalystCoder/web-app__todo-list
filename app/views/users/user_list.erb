@@ -1,7 +1,13 @@
 <h1>Users</h1>
 <ul style="list-style-type:circle">
   <% @users.each do |u| %>
+
     <li><%= u.name %></li>
+    <form action = "/edit_user_form/<%= u.id %>">
+          <input type = "submit" value = "Edit">
+    </form>
+    <form action = "/delete_user/<%= u.id %>">
+          <input type "submit" value = "Delete"
   <% end %>
 </ul>
 
