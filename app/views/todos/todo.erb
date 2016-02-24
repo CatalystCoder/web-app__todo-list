@@ -1,3 +1,32 @@
 <center><h1> The to do list: </h1>
 
-<a href="/new_todo_form">Add A task to do!</a>
+<table>
+ <% @todo.each do|t| %>
+  <tr>
+    <td>
+      <form action ="complete_todo">
+        <input type="checkbox" name = "completed">
+      </form>
+    </td>
+    <td>
+      <a href="/todo_page/<%=t.id%>">
+      <%= t.title %>
+      </a>
+    </td>
+    <td>
+      <form action = "/edit_todo_form/<%=t.id%>">
+        <input type="submit" value="Edit">
+      </form>
+    </td>
+    <td>
+      <form action="/delete_todo/<%=t.id%>">
+        <input type="submit" value="Delete">
+      </form>
+    </td>
+  </tr>
+<%end%>
+</table>
+
+
+<a href="/new_todo_form">Add a task to do!</a>
+</center
