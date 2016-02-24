@@ -31,3 +31,9 @@ MyApp.post "/user_updated/:user_id" do
   @user.save
   erb :"/users/updated"
 end
+
+MyApp.post "/delete_users/:user_id" do
+  @user = User.find_by_id(params[:user_id])
+  @user.delete
+  erb :"/users/deleted"
+end
