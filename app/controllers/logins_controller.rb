@@ -16,7 +16,6 @@ end
 
 MyApp.get "/login_attempt" do
   @user = User.find_by_email(params[:email])
-  @user.name = params["name"]
    
    if @user != nil && @user.password == params[:password] 
 
