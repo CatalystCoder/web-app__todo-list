@@ -12,3 +12,12 @@ MyApp.post "/new_user_created" do
   @user.save
   erb :"/users/create_success"
 end
+
+MyApp.get "/user_list" do
+  @users = User.all
+  erb :"/users/user_list"
+end
+
+MyApp.get "/edit_user_form/:user_id" do
+  @user = User.find_by_id(params[:user_id])
+  erb :"/users/edit_user_form"

@@ -16,8 +16,9 @@ end
 
 MyApp.get "/login_attempt" do
   @user = User.find_by_email(params[:email])
+  @user.name = params["name"]
    
-   if @user.password == params[:password]
+   if @user != nil && @user.password == params[:password] 
 
     session["user_id"] = @user.id
 
@@ -26,7 +27,6 @@ MyApp.get "/login_attempt" do
     erb :"/logins/login_fail"
   end
 end
-
 
 MyApp.get "/logout" do
   @user = nil
