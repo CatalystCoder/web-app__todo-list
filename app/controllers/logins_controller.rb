@@ -28,7 +28,6 @@ MyApp.get "/login_attempt" do
 end
 
 MyApp.get "/logout" do
-  @user = nil
-
+  session["user_id"] = nil
   erb :"logins/logout"
 end
