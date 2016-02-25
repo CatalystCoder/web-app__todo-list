@@ -9,6 +9,7 @@ MyApp.before "/todos*" do
 
 MyApp.get "/new_todo_form" do
   @users = User.all
+  @priorities = Priority.all
   erb :"/todos/new_todo_form"
 end
 
@@ -16,6 +17,7 @@ MyApp.post "/new_todo" do
   @todo = Todo.new
   @todo.title = params["title"]
   @todo.description = params["description"]
+  @todo.priority_id = params["priority_id"]
   @todo.user_id = params["user_id"]
   @todo.completed = false
   @todo.save

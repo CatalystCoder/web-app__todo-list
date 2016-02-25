@@ -12,6 +12,13 @@ User ID:
   <%end%>
 </select>
 
+<select name="priority_id"> 
+  <% @priorities.each do |p| %>
+    <option value= "<%=p.id%>"><%=p.priority%>
+    </option>
+  <%end%>
+</select>
+
 Title:
 <input type = "text" name = "title">
 
