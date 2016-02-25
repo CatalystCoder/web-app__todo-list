@@ -3,8 +3,18 @@
 <center><h1> Add to a To-Do list </h1>
 
 <form action = "/new_todo" method = "post">
+
+User ID:
+<select name="user_id"> 
+  <% @users.each do |u| %>
+    <option value= "<%=u.id%>"><%=u.name%>
+    </option>
+  <%end%>
+</select>
+
 Title:
 <input type = "text" name = "title">
+
 Description:
 <input type = "text" name = "description">
 <input type = "submit">
