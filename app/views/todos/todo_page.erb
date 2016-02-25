@@ -1,13 +1,20 @@
-<body background="http://thewowstyle.com/wp-content/uploads/2015/04/spring-desktop-backgrounds-hd.jpg">
+
 
 <center><h1> <%=@todo.title%> </h1>
 
 <p>
+Priority level:
+<%=@todo.priority_access.priority%>
+</p>
+<p>
+Description:
 <%= @todo.description%>
 </p>
+Created by:
+  <%=@todo.creator_name%>
 
-
-
+<br>
+<br>
 <a href="/">Home</a> | 
 <a href="/todos/list">To-do list</a> | 
-<a href="/logout">Log out</a> | </center></body>
+<a href="/logout">Log out</a> | </center>

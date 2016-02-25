@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 0) do
     t.boolean  "completed"
     t.integer  "user_id"
     t.integer  "priority_id"
+    t.text     "creator_id"
   end
 
   create_table "users", force: :cascade do |t|

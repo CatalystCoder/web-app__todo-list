@@ -19,6 +19,8 @@ MyApp.post "/new_todo" do
   @todo.description = params["description"]
   @todo.priority_id = params["priority_id"]
   @todo.user_id = params["user_id"]
+  @todo.creator_id = session["user_id"]
+  
   @todo.completed = false
   @todo.save
 
