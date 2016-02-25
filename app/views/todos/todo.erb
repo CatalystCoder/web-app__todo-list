@@ -1,3 +1,5 @@
+<body background="http://thewowstyle.com/wp-content/uploads/2015/04/spring-desktop-backgrounds-hd.jpg">
+
 <center><h1> The to do list: </h1>
 
 <table>
@@ -14,7 +16,7 @@
       </a>
     </td>
     <td>
-      <form action = "/edit_todo_form/<%=t.id%>">
+      <form action = "/todos/edit/form/<%=t.id%>">
         <input type="submit" value="Edit">
       </form>
     </td>
@@ -26,7 +28,9 @@
   </tr>
 <%end%>
 </table>
-
-
-<a href="/new_todo_form">Add a task to do!</a>
-</center
+<br>
+<br>
+<a href="/">Home</a>
+| <a href="/new_todo_form">Add a task to do!</a> | 
+<a href="/logout">Log out</a> |
+</center></body>

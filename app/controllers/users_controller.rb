@@ -1,5 +1,12 @@
 # This controller is for all the CRUD operations related to a User.
 
+MyApp.before "/user*" do
+  @user = User.find_by_id(session["user_id"])
+    if @user == nil
+      redirect "/login"
+    end
+  end
+
 MyApp.get "/new_user_form" do
   erb :"/users/new_user_form"
 end

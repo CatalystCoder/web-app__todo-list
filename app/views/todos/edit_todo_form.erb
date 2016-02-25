@@ -1,3 +1,5 @@
+<body background="http://thewowstyle.com/wp-content/uploads/2015/04/spring-desktop-backgrounds-hd.jpg">
+
 <center><h1> Edit your To Do List items:</h1>
 
 <form action = "/edit_todo/<%=@todo.id%>" method = "post">
@@ -6,8 +8,9 @@ Title:
 Description:
 <input type = "text" name = "description" value="<%=@todo.description%>">
 <input type = "submit">
-</form></center>
+</form>
 
+<br>
 <a href="/">Home</a> | 
-<a href="/todos_list">To-do list</a> | 
-<a href="/logout">Log out</a></center> |
+<a href="/todos/list">To-do list</a> | 
+<a href="/logout">Log out</a>  | </center></body>

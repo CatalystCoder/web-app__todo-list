@@ -1,11 +1,13 @@
+<body background="http://thewowstyle.com/wp-content/uploads/2015/04/spring-desktop-backgrounds-hd.jpg">
+
 <h1>Users</h1>
 <ul style="list-style-type:circle">
   <% @users.each do |u| %>
-
-    <li><%= u.name %></li>
+  <br>  
+    <li><%= u.name %></li><br>
     <form action = "/edit_user_form/<%= u.id %>">
           <input type = "submit" value = "Edit">
-    </form>
+    </form><br>
     <form action = "/delete_users/<%= u.id %>" method = "post">
           <input type = "submit" value = "Delete">
     </form>
@@ -15,3 +17,5 @@
 <br>
 <br> 
 <p><a href="/">Home</a></p>
+<a href="/new_user_form"> Create a new user</a>
+</body>

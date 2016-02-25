@@ -21,7 +21,7 @@ MyApp.get "/login_attempt" do
 
     session["user_id"] = @user.id
 
-    erb :"/logins/login_success"
+    redirect "/todos/list"
   else
     erb :"/logins/login_fail"
   end
@@ -29,5 +29,5 @@ end
 
 MyApp.get "/logout" do
   session["user_id"] = nil
-  erb :"logins/logout"
+  redirect "/"
 end
